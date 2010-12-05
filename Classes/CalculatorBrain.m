@@ -14,7 +14,6 @@
 @synthesize operand;
 @synthesize waitingOperation;
 @synthesize memOperand;
-@synthesize memOption;
 
 //private method
 - (void)performWaitingOperation:(BOOL )equal {

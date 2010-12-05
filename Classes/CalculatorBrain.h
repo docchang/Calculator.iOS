@@ -24,7 +24,6 @@
 
 @property BOOL radian;
 @property(readonly) double memOperand;
-@property(readonly) BOOL memOption;
 @property double operand;
 @property(readonly) NSString * waitingOperation;
 
