@@ -15,8 +15,9 @@
 	IBOutlet UILabel *displaywaitingOperation;
 	IBOutlet UILabel *displayMemory;
 	IBOutlet UILabel *displayRadorDeg;
-	
-	CalculatorBrain *brain;
+
+@private
+	IBOutlet CalculatorBrain *brain;
 	BOOL userIsInTheMiddleOfTypingANumber;
 }
 

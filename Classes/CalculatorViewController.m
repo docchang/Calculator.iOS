@@ -8,12 +8,13 @@
 
 #import "CalculatorViewController.h"
 
+//prviate properties
 @interface CalculatorViewController()
-@property(readonly) CalculatorBrain *brain;
+@property(nonatomic, retain) CalculatorBrain *brain;
 @end
 
 @implementation CalculatorViewController
-
+@synthesize brain;
 - (CalculatorBrain *)brain {
 	if (!brain) {
 		brain = [[CalculatorBrain alloc] init];
@@ -29,7 +30,7 @@
 	if ([@"0" isEqual:digit] && [@"0" isEqual:display.text]){
 		userIsInTheMiddleOfTypingANumber = NO;
 		return;
-	}	
+	}
 	
 	if (userIsInTheMiddleOfTypingANumber) {	
 		//if it's not a decimal or decimal is pressed but no decimal exist in the display value
@@ -94,6 +95,12 @@
 		displayRadorDeg.text = @"Deg";
 		[sender setTitle:@"Rad" forState:UIControlStateNormal];
 	}
+}
+
+- (void) dealloc {
+
+	[brain release];
+	[super dealloc];
 }
 
 @end
